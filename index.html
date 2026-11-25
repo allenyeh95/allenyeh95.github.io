@@ -1,54 +1,162 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-Hant">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Your Name</title>
+  <title>Allen Yeh</title>
   <style>
-    body {
-      max-width: 780px;
-      margin: 48px auto;
-      padding: 0 20px;
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-      line-height: 1.55;
-      color: #111;
-      background: #fff;
+    :root {
+      --text-main: #1a1a1a;
+      --text-muted: #555555;
+      --accent: #0969da;
+      --accent-hover: #054da7;
+      --border-subtle: #eaeaea;
+      --bg-page: #ffffff;
     }
-    h1 { font-size: 2rem; margin-bottom: 1rem; }
-    h2 { font-size: 1.35rem; margin-top: 2rem; margin-bottom: 0.75rem; }
-    ul { margin-top: 0.25rem; margin-bottom: 0.75rem; padding-left: 1.5rem; }
-    li { margin-bottom: 0.25rem; }
-    a { color: #0969da; }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      max-width: 680px;
+      margin: 72px auto;
+      padding: 0 24px;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Noto Sans TC", "PingFang TC", "Microsoft JhengHei", sans-serif;
+      font-size: 16px;
+      line-height: 1.65;
+      color: var(--text-main);
+      background-color: var(--bg-page);
+      -webkit-font-smoothing: antialiased;
+    }
+
+    header {
+      margin-bottom: 36px;
+      padding-bottom: 24px;
+      border-bottom: 1px solid var(--border-subtle);
+    }
+
+    h1 {
+      font-size: 2.1rem;
+      font-weight: 700;
+      letter-spacing: -0.025em;
+      margin: 0 0 12px 0;
+      line-height: 1.2;
+    }
+
+    .intro {
+      margin: 0;
+      color: var(--text-main);
+    }
+
+    .links {
+      display: inline-block;
+      margin-left: 6px;
+      font-size: 0.95rem;
+    }
+
+    a {
+      color: var(--accent);
+      text-decoration: none;
+      border-bottom: 1px solid transparent;
+      transition: color 0.15s ease, border-color 0.15s ease;
+    }
+
+    a:hover {
+      color: var(--accent-hover);
+      border-bottom-color: var(--accent-hover);
+    }
+
+    .timeline {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .timeline li {
+      margin-bottom: 24px;
+    }
+
+    .item-header {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: baseline;
+      gap: 8px;
+      margin-bottom: 4px;
+    }
+
+    .item-title {
+      font-weight: 600;
+      color: var(--text-main);
+    }
+
+    .item-date {
+      font-size: 0.875rem;
+      color: var(--text-muted);
+      font-variant-numeric: tabular-nums;
+    }
+
+    .item-desc {
+      margin: 0;
+      color: #333333;
+    }
+
+    @media (max-width: 480px) {
+      body {
+        margin: 40px auto;
+      }
+      h1 {
+        font-size: 1.75rem;
+      }
+    }
   </style>
 </head>
 <body>
-  <h1>Your Name</h1>
-  <p>Hello there! I'm Your Name. [<a href="https://github.com/yourhandle">github</a>] [<a href="https://linkedin.com/in/yourhandle">linkedin</a>]</p>
 
-  <p>Short bio line 1. What you currently do or study.</p>
-  <p>Short bio line 2. Background or key roles.</p>
+  <header>
+    <h1>Allen Yeh</h1>
+    <p class="intro">
+      Hello there! I'm Allen Yeh.
+      <span class="links">
+        [<a href="https://github.com/allenyeh95" target="_blank" rel="noopener">github</a>]
+        [<a href="https://www.linkedin.com/" target="_blank" rel="noopener">linkedin</a>]
+      </span>
+    </p>
+  </header>
 
-  <p>I'm broadly interested in Topic A [<a href="#">link</a>]. Particularly:</p>
-  <ul>
-    <li>Sub-interest 1.</li>
-    <li>Sub-interest 2 with details.</li>
-  </ul>
+  <main>
+    <ul class="timeline">
+      <li>
+        <div class="item-header">
+          <span class="item-title">Job</span>
+          <span class="item-date">Present</span>
+        </div>
+        <p class="item-desc">
+          Working at <a href="https://www.ulic.com.tw/" target="_blank" rel="noopener">聯興國際物流 (ULIC)</a> &amp; <a href="https://kl.twport.com.tw/" target="_blank" rel="noopener">臺灣港務公司 基隆港務分公司</a>.
+        </p>
+      </li>
 
-  <p>I also like Topic B. These things are pretty cool:</p>
-  <ul>
-    <li>Item 1,</li>
-    <li>Nested list example:
-      <ul>
-        <li>Sub-item A,</li>
-        <li>Sub-item B.</li>
-      </ul>
-    </li>
-  </ul>
+      <li>
+        <div class="item-header">
+          <span class="item-title">Job</span>
+          <span class="item-date">April 2026 – November 2026</span>
+        </div>
+        <p class="item-desc">
+          Worked at 基隆廟口.
+        </p>
+      </li>
 
-  <h2>News</h2>
-  <p><strong>Talk (Month Year).</strong> Title here. Venue [<a href="#">slides</a>]<br />
-  Brief one-line summary of what you presented.</p>
+      <li>
+        <div class="item-header">
+          <span class="item-title">University &amp; High School</span>
+          <span class="item-date">Education</span>
+        </div>
+        <p class="item-desc">
+          After graduating from <a href="https://www.tshs.tp.edu.tw/" target="_blank" rel="noopener">臺北市立大理高級中學</a>, I matriculated at <a href="https://www.ntou.edu.tw/" target="_blank" rel="noopener">國立臺灣海洋大學 (NTOU)</a>, <a href="https://tsweb.ntou.edu.tw/" target="_blank" rel="noopener">運輸科學系</a>.
+        </p>
+      </li>
+    </ul>
+  </main>
 
-  <p><strong>Project / Role (Month Year).</strong> Summary of milestone. [<a href="#">repo</a>]</p>
 </body>
 </html>
